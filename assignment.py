@@ -10,9 +10,18 @@ def title():
     # Author: Copper
     # Modified:
     # title
+    print("-= SUPER ULTRA CALCULATOR =- 2000\n")
+    print('Press "1" to see instructions')
+    print('Press "2" to exit calculator')
     return None
 
 def instructions():
+    print('__________________________________\nYou will enter in a number that represents "x"')
+    print('Press "1" to find circumference of a circle where "x" is the radius')
+    print('Press "2" to find area of a circle where "x" is the radius')
+    print('Press "3" to find volume of a sphere where "x" is the radius')    
+    print('Press "4" to find surface area of a sphere where "x" is the radius')
+    print('Press "5" to find how many spheres would be needed to reach the moon from earth if the spheres were chaining together to make a line and "x" is the radius of a circle in meters')
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
