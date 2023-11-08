@@ -11,9 +11,13 @@ def title():
     # Modified:
     # title
     print("-= SUPER ULTRA CALCULATOR =- 2000\n")
-    print('Press "1" to see instructions')
-    print('Press "2" to exit calculator')
-    return None
+    q1 = ('Press "1" to see instructions')
+    q2 = ('Press "2" to exit calculator')
+    if input(q1) == 1:
+        instructions()
+    if input(q2) == 2:
+        exit()
+    return input
 
 def instructions():
     print('__________________________________\nYou will enter in a number that represents "x"')
