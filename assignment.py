@@ -26,7 +26,7 @@ def title():
 def instructions():
     print('__________________________________')
     print('This calculator can do 5 tasks.\nThe options will be shown next')
-    time.sleep(2)
+    time.sleep(1)
     if input("press any key to continue\nType here -> ") == "1":
         menu()
     else:
@@ -38,7 +38,7 @@ def menu():
     print ('Press "2" to find area of a circle where you give the radius')
     print ('Press "3" to find volume of a sphere where give the radius')
     print ('Press "4" to find surface area of a sphere where you give the radius')
-    print ('Press "5" to find largest square in a circle\nType here -> ')
+    print ('Press "5" to find largest square in a circle')
             # Will display instructions
             # input parameters: none needed
             # output parameters: None
@@ -67,29 +67,39 @@ def main():
 
         if choice in ('1', '2', '3', '4', '5'):
             try:
-                r = float(input("Enter first number: "))
+                r = float(input("Enter number: "))
             except ValueError:
                 print("Invalid input. Please enter a number.")
                 continue
 
             if choice == '1':
-                print("The circumference of your circle is ",circumference(r))
+                x = (circumference(r))
+                print("The circumference of your circle is ",round(x, 2))
 
             elif choice == '2':
-                print("The area of your circle is ",area(r))
+                x = (area(r))
+                print("The area of your circle is ",round(x, 2))
 
             elif choice == '3':
-                print("The volume of your sphere is ", volume(r))
+                x = (volume(r))
+                print("The volume of your sphere is ", round(x, 2))
 
             elif choice == '4':
-                print("The surface area of your sphere is ", surface_area(r))
+                x = (surface_area(r))
+                print("The surface area of your sphere is ", round(x, 2))
 
             elif choice == '5':
-                print("The maximal square in your circle has an area of ", square_in_circle(r))
-
+                x = (square_in_circle(r))
+                print("The maximal square in your circle has an area of ", round(x, 2))
             next_calculation = input("Let's do next calculation? (yes/no): ")
             if next_calculation == "no":
+                print("Goodbye.")
+                time.sleep(0.5)
                 break
+            elif next_calculation == "yes":
+                continue
+            else:
+                print('Answer with "yes" or "no" please.')
         else:
             print("Invalid Input")
 
