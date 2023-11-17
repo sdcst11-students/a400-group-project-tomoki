@@ -20,16 +20,15 @@ def title():
             time.sleep(0.5)
             quit()
         else:
-            print("Invalid Input")
-            time.sleep(0.5)
+            print('Invalid Input. Please enter either "1" or "2"')
+            time.sleep(0.25)
             print("Try again")
-            time.sleep(0.5)
 
 def instructions():
     print('__________________________________')
-    print('This calculator can do 5 tasks.\nThe options will be shown next')
-    time.sleep(1)
-    if input("press any key to continue\nType here -> ") == "1":
+    print('This calculator can do 5 different operations.\nSolutions will be rounded to 2 decimal places.\nThe options will be shown next.')
+    time.sleep(0.75)
+    if input("press any key to continue!\nType here -> ") == "1":
         menu()
     else:
         menu()
@@ -75,24 +74,19 @@ def main():
                 continue
 
             if choice == '1':
-                x = (circumference(r))
-                print("The circumference of your circle is ",round(x, 2))
+                print("The circumference of your circle is ",round((circumference(r)), 2))
 
             elif choice == '2':
-                x = (area(r))
-                print("The area of your circle is ",round(x, 2))
+                print("The area of your circle is ",round((area(r)), 2))
 
             elif choice == '3':
-                x = (volume(r))
-                print("The volume of your sphere is ", round(x, 2))
+                print("The volume of your sphere is ",round((volume(r)), 2))
 
             elif choice == '4':
-                x = (surface_area(r))
-                print("The surface area of your sphere is ", round(x, 2))
+                print("The surface area of your sphere is ",round((surface_area(r)), 2))
 
             elif choice == '5':
-                x = (square_in_circle(r))
-                print("The maximal square in your circle has an area of ", round(x, 2))
+                print("The maximal square in your circle has an area of ",round((square_in_circle(r)), 2))
             while True:
                 next_calculation = input("Let's do next calculation? (yes/no): ")
                 if next_calculation == "no":
@@ -105,7 +99,7 @@ def main():
                 else:
                     print('Answer with "yes" or "no" please.')
         else:
-            print("Invalid Input")
+            print("Invalid Input. Please enter a number between 1 and 5")
 
     
 
