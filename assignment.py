@@ -16,6 +16,8 @@ def title():
             instructions()
             break
         elif choice == "2":
+            print("Goodbye.")
+            time.sleep(0.5)
             quit()
         else:
             print("Invalid Input")
@@ -67,7 +69,7 @@ def main():
 
         if choice in ('1', '2', '3', '4', '5'):
             try:
-                r = float(input("Enter number: "))
+                r = float(input("Enter radius: "))
             except ValueError:
                 print("Invalid input. Please enter a number.")
                 continue
@@ -91,18 +93,21 @@ def main():
             elif choice == '5':
                 x = (square_in_circle(r))
                 print("The maximal square in your circle has an area of ", round(x, 2))
-            next_calculation = input("Let's do next calculation? (yes/no): ")
-            if next_calculation == "no":
-                print("Goodbye.")
-                time.sleep(0.5)
-                break
-            elif next_calculation == "yes":
-                continue
-            else:
-                print('Answer with "yes" or "no" please.')
+            while True:
+                next_calculation = input("Let's do next calculation? (yes/no): ")
+                if next_calculation == "no":
+                    print("Goodbye.")
+                    time.sleep(0.5)
+                    quit()
+                elif next_calculation == "yes":
+                    menu()
+                    break
+                else:
+                    print('Answer with "yes" or "no" please.')
         else:
             print("Invalid Input")
 
+    
 
 
 
